@@ -1,0 +1,2 @@
+1. from practices import my_abs 来导入my_abs()函数，注意practices是文件名
+2.
