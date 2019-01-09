@@ -1,4 +1,7 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 # task_master.py
+
 
 import queue
 from multiprocessing.managers import BaseManager
@@ -25,7 +28,7 @@ class QueueManager(BaseManager):
 
 
 if __name__ == '__main__':
-    # 把两个Queue都注册到网络上, callable参数关联了Queue对象
+    # 把两个Queue都注册到网络上
     QueueManager.register('get_task_queue', callable=return_task_queue)
     QueueManager.register('get_result_queue', callable=return_result_queue)
     # 绑定端口5000，设置验证码'abc'
